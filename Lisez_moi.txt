@@ -1,0 +1,148 @@
+Bike-Symbols
+Cette application permet d'afficher les symboles de vélo ou de tricycle.
+
+Cette application nécessite d'avoir préalablement installé OpenSCAD (un
+ logiciel de modélisation 3D paramétrique gratuit), voir ici:
+* http://www.openscad.org/downloads.html#snapshots
+Les versions 'snapshots' d'OpenScad sont recommandées car elles sont
+ fréquemment mises à jour et sont fiables.
+*Vous devez au moins utiliser la dernière version officielle (2019.05).
+*Tous les fichiers doivent être installés dans un répertoire sur votre
+ ordinateur, même si vous n'avez pas vraiment besoin du répertoire
+ 'Images' pour exécuter l'application.
+
+*Comment installer l'application ?
+A l'adresse https://github.com/PRouzeau/Bike-Symbols sous la ligne grise, 
+ sur la droite, il y a un bouton [Clone or download] qui ouvre une petite
+ fenêtre où vous trouverez un lien [Download ZIP], à cliquer.
+Ceci ouvre une fenêtre'Téléchargement...' avec deux boutons proposant 
+'sign in' et 'sign up'. Ceci est sans intérêt pour un utilisateur final.
+Parallèlement, votre navigateur télécharge le fichier fichier
+ 'Bike-Symbols-master.zip' et peut proposer de l'enregistrer quelque part
+ (ceci dépend de la configuration de votre navigateur). Ouvrez le fichier
+ zip, il contient un répertoire 'Bike-Symbols-master', son contenu doit être
+ installé n'importe où sur votre ordinateur. (toutefois, consultez le
+ paragraphe ci-dessous pour connaître les restrictions relatives à 
+ au nom complet du répertoire).
+ 
+*Le chemin complet du répertoire où vous installez cette application
+ (symboles de vélo ou tout autre) n'utilisent que des caractères ASCII,
+ sans les caractères spéciaux, les espaces, les lettres accentuées,
+ les diacritiques, les trémas ou tout autre jeu de caractères.
+Sans ces conditions, l'ensemble de données du Customizer ne peut pas être
+ sauvegardé.
+ 
+*Pour démarrer l'application, cliquez sur le fichier 'Bike_symbols.scad'.
+Ceci ouvrira OpenSCAD avec l'application chargée. Cliquez sur[F5] pour
+ lancer l'exemple par défaut.
+
+Depuis la version OpenSCAD 2019.05, Customizer est automatiquement activé.
+
+*Dans le menu[Affichage], vous aurez maintenant une option 
+ [Masquer le panneau de personnalisation], qui doit être décochée, de sorte que
+ le panneau de personnalisation apparaisse à droite.
+
+*Dans le même menu [Affichage], vous pouvez masquer l'éditeur de
+ programmation en cochant la case [Masquer l'éditeur].
+
+*L'interface utilise la langue locale (telle que configurée sur votre
+ machine) par défaut.
+ Pour désactiver le langage local: menu[Edition][Préférences] onglet[Avancé],
+ décochez l'option (en bas)[Activer la localisation de l'interface
+ utilisateur (nécessite le redémarrage d'openSCAD)]. 
+
+*Après le chargement du programme, le Customizer n'est pas activé, vous
+ devez d'abord faire un avec la touche[F5] ou en cliquant sur la
+ première icône sous la vue.
+ 
+*Exécutez l'exemple par défaut, vous devez donc avoir un modèle affiché dans
+ la fenêtre d'affichage (après avoir cliqué sur le bouton [tout afficher]: 
+ troisième sur la ligne du bas)
+ 
+*Si vous ne voyez rien après une prévisualisation, il y a un problème 
+ d'installation, vérifiez donc que vous avez téléchargé tous les fichiers
+ et que le nom du répertoire est bien conforme aux spécifications décrites
+ dans le paragraphe ci-dessus.
+ Il ne doit pas y avoir de message d'erreur dans la fenêtre de la console.
+ 
+*Toute modification de champ est validée après un [enter] ou après un
+ déplacement vers un autre champ. Une validation de champ modifiée exécute
+ automatiquement un nouvel aperçu.
+ 
+*Les images peuvent être exportées à partir d'un simple aperçu ([F5]) avec
+ la commande []Fichier][Exporter][Exporter comme image].
+
+*Pour exporter un objet 2D, vous devez d'abord faire une'projection' du
+ modèle 3D (Le modèle que vous voyez a une épaisseur de 1) en cochant 
+ 'projection 2D' dans l'onglet [Affichage]. L'aperçu (et non le rendu) sera
+ lancé automatiquement après avoir coché et cela peut prendre un certain
+ temps en fonction de la complexité de votre modèle.
+ 
+*Vous ne pouvez pas exporter un fichier DXF à partir d'un aperçu, vous devez
+ d'abord effectuer un rendu ([F6]), directement ou après une prévisualisation, 
+ puis faites [Fichier][Exporter][exporter en DXF].
+
+*Vous pouvez exporter un modèle 3D en faisant un rendu[f6] sans demander un fichier
+ projection. Vous souhaitez probablement augmenter l'épaisseur de votre modèle avec
+ le paramètre'épaisseur du modèle' dans l'onglet[Affichage].
+ 
+Lorsque le dessin est complet, le concepteur peut l'enregistrer dans un
+ nouvel ensemble de données, pour celà appuyez sur le bouton [+] pour
+ créer un nouvel ensemble de données, puis sur le bouton [Enregistrer le jeu
+ de données].
+Chaque ensemble de données peut être rappelé en le sélectionnant dans la
+ liste déroulante.
+ RIEN n'est enregistré automatiquement.
+Si l'enregistrement d'un ensemble de données ne fonctionne pas, voir la note
+ ci-dessus sur les caractères de nom de répertoire.
+
+Notez que pour les variables avec spinboxes (petite boîte avec flèches
+ haut/bas), lorsque vous cliquez dans la zone de valeur, vous pouvez ensuite
+ utiliser la molette de défilement de la souris pour modifier la valeur.
+
+Copyright 2019 Pierre ROUZEAU, alias "PRZ".
+Licence du programme GPL 3.0
+Licence de documentation cc BY-SA 4.0 et GFDL 1.2
+Licence des symboles: cc BY-SA 4.0 et GFDL 1.2
+Une note sur la licence des symboles, il n'y a pas de restriction commerciale,
+ c'est à dire que vous pouvez utiliser ou vendre des étiquettes sans me
+ demander ni envoyer de royalties.
+Cependant, ce que vous devez faire, c'est : 
+*Indiquez que je suis l'auteur des symboles.
+*Les images ne peuvent être incorporées que dans des documents ayant une
+ licence similaire, par exemple, si cette image est ajoutée dans un
+ document, le document qui l'utilise doit comporter licence compatible 
+ (c'est à dire libre d'être utilisé avec le même régime de licence et 
+ citant l(es)'auteur(s). C'est le principe de base d'une licence "virale".
+ 
+ Mais ce n'est pas un dessin original ? En effet, ce n'est pas si original
+ que ça et les symboles s'inspirent évidemment des symboles existants, mais
+ les proportions ont toutefois été modifiées à de nombreuses reprises et des
+ adaptations ont dû être faites pour positionner correctement les
+ articulations.
+Pour souligner ce point, vous devez savoir que ces symboles en apparence
+ similaires n'ont pas les mêmes dimensions que ceux que j'ai déjà publiés
+ dans l'application "Croisement protégé", elles sont mieux proportionnées.
+Après tout, si vous n'êtes pas d'accord avec la licence et que vous pensez
+ que c'est si facile, vous pouvez faire votre propre version si vous le
+ souhaitez. C'est probablement la raison pour laquelle vous avez tant de
+ variantes de symboles similaires, il est plus facile d'en refaire une que
+ de chercher qui possède les droits d'un modèle.
+
+Ceci utilise ma bibliothèque OpenSCAD, jointe, mais si vous êtes curieux
+ vous pouvez trouver des détails ici:
+https://github.com/PRouzeau/OpenScad-Toolbox
+
+Ce programme est un logiciel libre: vous pouvez le redistribuer et/ou le
+ modifier sous les termes de la Licence Publique Générale GNU telle que
+ publiée par la Free Software Foundation, soit la version 3 de la Licence,
+ soit (à votre choix) toute version ultérieure.
+
+Ce programme est distribué dans l'espoir qu'il sera utile,
+  mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
+  LA COMMERCIALISATION ou l'ADÉQUATION À UN OBJECTIF PARTICULIER.  Voir la
+  license GNU General Public License pour plus de détails.
+
+Vous devriez avoir reçu une copie de la Licence Publique Générale GNU
+ avec ce programme. Sinon, voir <https://www.gnu.org/licenses/>.
+
