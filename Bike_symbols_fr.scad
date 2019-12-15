@@ -177,10 +177,11 @@ module rider (y=0, x=0, ta=0, la=0, aa=45, ha=0, allow_crank=true) {
 		//cylz (-2,100); // articulation axis
 		color(r_color)
 			body(0,0, -10+ta) {
-				upper_arm(-d*0.05,d*0.065, aa)
+				upper_arm(-d*0.05,d*0.043, aa)
 					fore_arm(ta<-30?55:30); // detect roadie pos
+				//head
 				rotz(ha)
-					cylz(d*0.3,ht,  -d*0.38,0);
+					cylz(d*0.29,ht,  -d*0.38,0);
 			}
 		t(-d*0.15) // rotate at hip middle
 			rotz(la) t(d*0.04) {
@@ -189,7 +190,7 @@ module rider (y=0, x=0, ta=0, la=0, aa=45, ha=0, allow_crank=true) {
 					upper_leg(d*0.025, -d*0.04, 60)
 						lower_leg (-75);
 				else {
-					upper_leg(0, -d*0.07, 34)
+					upper_leg(0, -d*0.06, 34)
 						lower_leg (-35);
 					//folded leg
 					if(la>-22) // folded
@@ -262,9 +263,13 @@ module rider (y=0, x=0, ta=0, la=0, aa=45, ha=0, allow_crank=true) {
 	module body (x=0,y=0,a) {
 		t(x-d*0.15,y)
 			rotz(a) {
-				hull() {
+				*hull() { // thicker body
 					cylz(d/3,ht);
 					cylz(d/3,ht, -d*0.5);
+				}
+				hull() {
+					cylz(d/3.4,ht, d*0.02,-d*0.015);
+					cylz(d/3.4,ht, -d*0.52,-d*0.015);
 				}
 				t(-d*0.5)
 					children();
@@ -272,6 +277,7 @@ module rider (y=0, x=0, ta=0, la=0, aa=45, ha=0, allow_crank=true) {
 	}
 }
 
+// wheel d rear + front,Wheel base,
 module cycle (dw=90, dwf=68, wbh = 68, x=25, y=-40, ta=44, la=60, aa=24, ha=-18, is_trike=true) {
 	diam = 100;
 	ht=1;
@@ -320,7 +326,7 @@ module cycle (dw=90, dwf=68, wbh = 68, x=25, y=-40, ta=44, la=60, aa=24, ha=-18,
 module velomobile () {
 	ht=1;
 	diam=100;
-	cycle(90,68,72, 25,-23, 47,70,42,-18);
+	cycle(90,68,71, 26,-23, 47,70,43,-18);
 	color(s_color) {
 		//roof
 		t(diam*0.6,-diam*0.23)
