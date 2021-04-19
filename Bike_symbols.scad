@@ -5,10 +5,7 @@
 // All bike symbols are original design
 
 include <Z_library.scad>
-//fr:Nombre de segments pour un cercle complet. Un plus grand nombre augmente le temps de calcul.
-//number of segment for one circle. Higher number increase calculation time.
-$fn=64;
-//-------------------------------------------
+//-----------------------------------
 /*fr:[Affichage]*/
 /*[Display]*/
 //fr:Affiche le trait symbolisant le sol
@@ -27,49 +24,61 @@ single_leg = false;
 //fr:Affiche le symbole de pédalier
 //Display crankset symbol
 crank = true;
+//fr:License du programme
+//Program license
+license=true;
+//fr:Nombre de segments pour un cercle complet. Un plus grand nombre augmente le temps de calcul.
+//number of segment for one circle. Higher number increase calculation time.
+$fn=64;
+
+/*fr:[Symboles]*/
+/*[Symbols]*/
 //fr:Coefficient d'anamorphose (pour peinture sol)
 //Vertical anamorphosis coefficient (for road paint)
 anamorph = 1;
 //fr:Épaisseur des symboles (pour faire un modèle 3D)
 //symbol thickness (to build a 3D model)
 model_thk=1;
+//fr:Fichier image utilisateur (avec extension) PNG ~200x200, vide s'il n'y a pas d'image utilisateur. Calcul long.
+//User image file (with extension) PNG ~200x200. Empty if no user image. Long process.
+user_file="";
 //fr:1er symbole
 //First Symbol
-Symb1=2; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile]
-//fr::Symb1=2; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile]
+Symb1=2; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile,9:User image]
+//fr::Symb1=2; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile,9:Image utilisateur]
 //fr:2eme symbole
 //Second Symbol
-Symb2=6; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile]
-//fr::Symb2=6; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile]
+Symb2=6; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile,9:User image]
+//fr::Symb2=6; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile,9:Image utilisateur]
 //fr:3eme symbole
 //Third Symbol
-Symb3=7; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile]
-//fr::Symb3=7; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile]
+Symb3=7; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile,9:User image]
+//fr::Symb3=7; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile,9:Image utilisateur]
 //fr:4eme symbole
 //Fourth Symbol
-Symb4=8; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile]
-//fr::Symb4=8; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile]
+Symb4=8; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile,9:User image]
+//fr::Symb4=8; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile,9:Image utilisateur]
 //fr:5eme symbole
 //Fifth Symbol
-Symb5=0; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile]
-//fr::Symb5=0; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile]
+Symb5=0; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile,9:User image]
+//fr::Symb5=0; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile,9:Image utilisateur]
 //fr:6eme symbole
 //Six Symbol
-Symb6=0; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile]
-//fr::Symb6=0; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile]
+Symb6=0; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile,9:User image]
+//fr::Symb6=0; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile,9:Image utilisateur]
 //fr:7eme symbole
 //Seventh Symbol
-Symb7=0; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile]
-//fr::Symb7=0; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile]
+Symb7=0; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile,9:User image]
+//fr::Symb7=0; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile,9:Image utilisateur]
 //fr:8eme symbole
 //Eighth Symbol
-Symb8=0; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile]
-//fr::Symb8=0; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile]
+Symb8=0; // [0:None, 1:Walker, -1:Penny Farthing, 2:Urban cyclist, 3:Roadie,4:LWB recumbent, 5:CLWB recumbent,6:SWB recumbent, 7:Recumbent trike,8:Velomobile,9:User image]
+//fr::Symb8=0; // [0:Aucun, 1:Marcheur, -1:Grand-Bi, 2:Cycliste urbain, 3:Cycliste de route,4:Vélo couché à grand empattement, 5:Vélo couché compact a grand empattement,6:Vélo couché a empattement court, 7:Tricycle couché,8:Vélomobile,9:Image utilisateur]
 
 //fr: Position en x des symboles (0: pas d'affichage);
 //Symbols x position (0: no display);
 symb_x = [1,300,600,930,0,0,0,0];
-//-----------------------------------------
+//----------------------------------------
 /*fr:[Texte, symbole puissance et cadre]*/
 /*[Text, supply symbol and frame]*/
 //fr:Type de cadre
@@ -151,7 +160,7 @@ frame_color = "Red";
 //Supply symbol color
 supply_color = "MediumSeaGreen";
 
-//==========================================
+//=======================================
 symb_t = [Symb1,Symb2,Symb3,Symb4,Symb5,Symb6,Symb7,Symb8];
 
 symb_x2 = [ for (i = [0:len(symb_t)-1]) symb_t[i]==8?symb_x[i]+60:symb_x[i]]; // add 60 in length for velomobile (type 8)
@@ -220,9 +229,17 @@ module disp_all () {
 			cycle();
 		else if (type==8) //Velomobile
 			velomobile();
+    else if (type==9 && user_file!="")
+      black()
+      t(-200, -80)
+        projection() 
+          diff() {
+            surface(str("User_images/",user_file), invert=true);
+            cubez(1000,1000,-500, 0,0,-10);
+          }  
 	}
 } // disp_all
-
+//--------------------------------------
 module rider (y=0, x=0, ta=0, la=0, aa=45, ha=0, allow_crank=true) {
 	d = 100;
 	ht=1;
@@ -330,7 +347,7 @@ module rider (y=0, x=0, ta=0, la=0, aa=45, ha=0, allow_crank=true) {
 			}
 	}
 }
-
+//--------------------------------------
 // wheel d rear + front,Wheel base,
 module cycle (dw=90, dwf=68, wbh = 68, x=25, y=-40, ta=44, la=60, aa=24, ha=-18, is_trike=true) {
 	diam = 100;
@@ -376,7 +393,7 @@ module cycle (dw=90, dwf=68, wbh = 68, x=25, y=-40, ta=44, la=60, aa=24, ha=-18,
 			fwheel_cut();
 	}
 }
-
+//--------------------------------------
 module velomobile () {
 	ht=1;
 	diam=100;
@@ -413,12 +430,12 @@ module velomobile () {
 			}
 	}
 }
-
+//--------------------------------------
 //function test if a value exists in a vector
 function val_in (aVector, start=0, end=0, val=-1) = [for (i = end, a = aVector[i]==val;i >= start;i = i - 1, a = a?true: aVector[i]==val) a ][end - start]; 
 
 //echo ("val in", val_in(symb_t,0,len(symb_t), -1));
-
+//--------------------------------------
 module frame () {
 	//frame top and bottom plane shall not be coinciident with object planes because of colors problems.
 	hh = 1; // model thickness, beware of color handling, faces shall not interfere with others. rider faces at 1, wheels at 0.9  
@@ -467,11 +484,12 @@ module frame () {
 					cubex (-ht,ht*1.5,10);
 			}
 		}
+  if(license)  
 	black()
 	t(xpos+20,ypos-10)
 		text("(c) Pierre ROUZEAU license CC BY-SA 4.0 ", 11, "Liberation Sans:Bold", valign = "top");
 }
-
+//--------------------------------------
 module dx(d=5, dx=0, x=0, y=0, t=1) {
 	dpx = d>0?0:-dx/2; 
 	t(x+dpx,y)
@@ -480,7 +498,7 @@ module dx(d=5, dx=0, x=0, y=0, t=1) {
 				cylz(abs(d),t);
 	t(x+dpx+dx,y) children();
 }
-
+//--------------------------------------
 module plug_symbol (d=5) {
 	t(-d,-6*d) // ref left top
 	diff() { 
@@ -516,7 +534,7 @@ module plug_symbol (d=5) {
 							dx(ds,1.8*d,0,0,10);
 	}
 }
-
+//--------------------------------------
 // ref point: left top
 module food_symbol (d=5, plate=true) {
 	module fork (d=6) {
@@ -556,7 +574,7 @@ module food_symbol (d=5, plate=true) {
 		}
 	}
 }
-
+//--------------------------------------
 module food_plug_symbol (d=5) {
 	food_symbol(d, false);
 	t(16.5*d,-6*d) {
@@ -567,7 +585,7 @@ module food_plug_symbol (d=5) {
 	t(21.5*d)
 		plug_symbol(d);
 }
-
+//--------------------------------------
 module disp_supply_symb (pws=0, d=5, x=0, y=0) {
 	color(supply_color) t(x,y)
 		if (pws==1) 

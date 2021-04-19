@@ -100,6 +100,11 @@ Notez que pour les variables avec spinboxes (petite boîte avec flèches
  haut/bas), lorsque vous cliquez dans la zone de valeur, vous pouvez ensuite
  utiliser la molette de défilement de la souris pour modifier la valeur.
 
+Pour utiliser une image utilisateur (pour un symbole de conception personnelle
+ou un QR code), L'image doit être au format png en noir et blanc et d'une
+hauteur inférieure à 200 pixels. Elle doit être placée dans le répertoire
+"User_images". Le traitement de cette image par OpenSCAD prend du temps.
+
 Copyright 2019 Pierre ROUZEAU, alias "PRZ".
 Licence du programme GPL 3.0
 Licence de documentation cc BY-SA 4.0 et GFDL 1.2

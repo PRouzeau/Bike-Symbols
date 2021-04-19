@@ -1,7 +1,6 @@
 Bike SYMBOLS
 This application is made to display bike symbols of bicycle or tricycle.
 
-
 This application need to have prealably installed OpenSCAD (a free parametric
  3D modeler), see here:
 * http://www.openscad.org/downloads.html#snapshots
@@ -86,6 +85,13 @@ If dataset recording don't work, see above note about the directory character
 Note that for variables with spinboxes (small box with top/down arrows),
  when you click in the value box, you can then use the mouse scroll wheel
  to modify the value. 
+
+If you want to display a user image (for own symbol or QR code), the user
+image shall in png format, black and white, of an height below 200 pixels.
+It shall be set in 'User_images' directory. The image processing by 
+OpenSCAD takes some time.
+
+To remove the copyright mark, untick 'Program license' in [display] tab.
 
 Copyright 2019 Pierre ROUZEAU, AKA "PRZ"
 Program license GPL 3.0
