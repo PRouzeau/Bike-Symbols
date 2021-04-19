@@ -68,7 +68,7 @@ text_font = "DejaVu Sans: Italic";
 //Hauteur (taille) du 1er texte
 text_size = 48;
 //Position horizontale du 2eme et 3eme texte
-text2_x = 320;
+text2_x = 310;
 //Second texte
 text2 = "A besoin d'une nourriture saine";
 //Position verticale du 3eme texte
@@ -94,6 +94,8 @@ supply_symb_y = -20;
 s_color = "Black";
 //Couleur du cycliste
 r_color = "MediumSeaGreen";
+//Couleur image utilisateur
+u_color = "Black";
 //Couleur du 1er texte
 t_color = "Black";
 //Couleur du 2ème texte
@@ -173,7 +175,7 @@ scale([1,anamorph,model_thk]){
 		else if (type==8) //Velomobile
 			velomobile();
 else if (type==9 && user_file!="")
-black()
+color(u_color)
 t(-200, -80)
 projection()
 diff() {

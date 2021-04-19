@@ -147,6 +147,9 @@ s_color = "Black";
 //fr:Couleur du cycliste
 //Rider color
 r_color = "MediumSeaGreen";
+//fr:Couleur image utilisateur
+//User image color
+u_color = "Black";
 //fr:Couleur du 1er texte
 //First text color
 t_color = "Black";
@@ -230,7 +233,7 @@ module disp_all () {
 		else if (type==8) //Velomobile
 			velomobile();
     else if (type==9 && user_file!="")
-      black()
+      color(u_color)
       t(-200, -80)
         projection() 
           diff() {
