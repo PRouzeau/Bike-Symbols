@@ -146,7 +146,7 @@ supply_symb_y = -20;
 s_color = "Black";
 //fr:Couleur du cycliste
 //Rider color
-r_color = "MediumSeaGreen";
+r_color = "Lime";
 //fr:Couleur image utilisateur
 //User image color
 u_color = "Black";
@@ -158,10 +158,10 @@ t_color = "Black";
 t2_color = "Red";
 //fr:Couleur du cadre
 //Frame color
-frame_color = "Red";
+frame_color = "Lime";
 //fr:Couleur du symbole d'alimentation
 //Supply symbol color
-supply_color = "MediumSeaGreen";
+supply_color = "Lime";
 
 //=======================================
 symb_t = [Symb1,Symb2,Symb3,Symb4,Symb5,Symb6,Symb7,Symb8];

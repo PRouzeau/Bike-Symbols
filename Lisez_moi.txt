@@ -13,7 +13,7 @@ Les versions 'snapshots' d'OpenScad sont recommandées car elles sont
 
 *Comment installer l'application ?
 A l'adresse https://github.com/PRouzeau/Bike-Symbols sous la ligne grise, 
- sur la droite, il y a un bouton [Clone or download] qui ouvre une petite
+ sur la droite, il y a un bouton [Code] qui ouvre une petite
  fenêtre où vous trouverez un lien [Download ZIP], à cliquer.
 Ceci ouvre une fenêtre'Téléchargement...' avec deux boutons proposant 
 'sign in' et 'sign up'. Ceci est sans intérêt pour un utilisateur final.

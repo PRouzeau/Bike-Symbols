@@ -93,7 +93,7 @@ supply_symb_y = -20;
 //Couleur du vélo
 s_color = "Black";
 //Couleur du cycliste
-r_color = "MediumSeaGreen";
+r_color = "Lime";
 //Couleur image utilisateur
 u_color = "Black";
 //Couleur du 1er texte
@@ -101,14 +101,14 @@ t_color = "Black";
 //Couleur du 2ème texte
 t2_color = "Red";
 //Couleur du cadre
-frame_color = "Red";
+frame_color = "Lime";
 //Couleur du symbole d'alimentation
-supply_color = "MediumSeaGreen";
+supply_color = "Lime";
 
 //=======================================
 symb_t = [Symb1,Symb2,Symb3,Symb4,Symb5,Symb6,Symb7,Symb8];
 
-symb_x2 = [ for (i = [0:len(symb_t)-1]) symb_t[i]==8?symb_x[i]+60:symb_x[i]]; // add 60 in length for velomobile (type 8)
+symb_x2 = [for(i = [0:len(symb_t)-1]) symb_t[i]==8?symb_x[i]+60:symb_x[i]]; // add 60 in length for velomobile (type 8)
 ground_length = max(symb_x2);  // ground length
 	
 // echo_camera();

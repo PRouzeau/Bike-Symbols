@@ -12,7 +12,7 @@ Snapshot versions of OpenScad are recommended as they are frequently updated
 
 *How to install the application ?
 At address https://github.com/PRouzeau/Bike-Symbols under gray line, on
-the right there is a button [Clone or Download] which open a small window
+the right there is a button [Code] which open a small window
 where you will find a link [Download ZIP], to click.
 This open a window 'Downloading...' with two buttons proposing to 'sign up'
 or 'sign in'. You don't need either. In parallel, your browser download the
