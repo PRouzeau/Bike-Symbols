@@ -184,7 +184,7 @@ $vpd=first_view?4600:$vpd;
 //Camera translation
 $vpt=first_view?[500,400,0]:$vpt; 
 //Camera rotation
-$vpr=first_view?[0,0,0]:$vpr; 
+$vpr=[0,0,0]; 
 //====================================
 module disp_all () {
  scale([1,anamorph,model_thk]){
@@ -473,24 +473,24 @@ module frame () {
 			//:::::::::::::::::
 			t(lgr/2+60)
 				rotz(-30) 
-					cubex (ht,ht*1.5,10);
+					cubex(ht,ht*1.5,10);
 			t(-lgr/2-60)
 				rotz(-30) 
-					cubex (-ht,ht*1.5,10);
+					cubex(-ht,ht*1.5,10);
 			diff() {
 				cubez(lgr+ht+150,ht-2*t,10, 0,0,-5);
 				t(lgr/2+60-t*1.2)
 				rotz(-30) 
-					cubex (ht,ht*1.5,10);
+					cubex(ht,ht*1.5,10);
 			t(-lgr/2-60+t*1.2)
 				rotz(-30) 
-					cubex (-ht,ht*1.5,10);
+					cubex(-ht,ht*1.5,10);
 			}
 		}
   if(license)  
 	black()
-	t(xpos+20,ypos-10)
-		text("(c) Pierre ROUZEAU license CC BY-SA 4.0 ", 11, "Liberation Sans:Bold", valign = "top");
+    t(xpos+20,ypos-10)
+      text("(c) Pierre ROUZEAU license CC BY-SA 4.0 ", 11, "Liberation Sans:Bold", valign = "top");
 }
 //--------------------------------------
 module dx(d=5, dx=0, x=0, y=0, t=1) {

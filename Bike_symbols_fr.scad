@@ -126,7 +126,7 @@ $vpd=first_view?4600:$vpd;
 //Camera translation
 $vpt=first_view?[500,400,0]:$vpt;
 //Camera rotation
-$vpr=first_view?[0,0,0]:$vpr;
+$vpr=[0,0,0];
 //====================================
 module disp_all () {
 scale([1,anamorph,model_thk]){
