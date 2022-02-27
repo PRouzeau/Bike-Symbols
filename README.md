@@ -9,7 +9,7 @@ You can add text and one user image, which can be a 'QR Code'.
  
 Details in "Readme_first.txt"
 
-It uses OpenSCAD as 3D modeler engine.
+It uses OpenSCAD as 3D modeler engine. - Use only 2021.01 version and NOT snapshot/nightly-
 
 To install OpenSCAD applications, see http://rouzeau.net/OpenSCADEn/Applications
 

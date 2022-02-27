@@ -3,9 +3,9 @@ Cette application permet d'afficher les symboles de vélo ou de tricycle.
 
 Cette application nécessite d'avoir préalablement installé OpenSCAD (un
  logiciel de modélisation 3D paramétrique gratuit), voir ici:
-* http://www.openscad.org/downloads.html#snapshots
-Les versions 'snapshots' d'OpenScad sont recommandées car elles sont
- fréquemment mises à jour et sont fiables.
+* http://www.openscad.org/downloads.html
+Utiliser la version 2021.01. Les versions 'snapshots/nightly' d'OpenScad
+ne fonctionnent PAS suite à la suppression de certaines fonctionalités.
 *Vous devez au moins utiliser la dernière version officielle (2019.05).
 *Tous les fichiers doivent être installés dans un répertoire sur votre
  ordinateur, même si vous n'avez pas vraiment besoin du répertoire
